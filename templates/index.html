@@ -6,12 +6,23 @@
   <title>Aayushi Marfatia</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
     body {
       margin: 0;
       background-color: #f5f5f5;
       font-family: 'Inter', sans-serif;
       color: #111;
       padding-top: 70px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
     }
 
     header {
@@ -25,22 +36,20 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px 35px;
-      font-size: 24px;
-      /* font-weight: bold; */
-      color: #A74D4A;
+      font-size: 1.5rem;
+      color: #FF5E1A;
       margin-top: 5px;
       box-sizing: border-box;
-      /* border-bottom: 1px solid #e0e0e0; */
     }
 
     .email {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: 30px;
-      color: #A74D4A;
+      font-size: 3.0rem;
+      color: #FF5E1A;
       margin-left: 40px;
       margin-bottom: 25px;
-      text-decoration: underline 2px dashed #A74D4A;
+      text-decoration: underline 2px dashed #000000;
     }
 
     .container {
@@ -75,29 +84,33 @@
 
     .portfolio-title {
       font-family: 'Playfair Display', serif;
-      letter-spacing: -20px;
+      letter-spacing: -0.09em;
       line-height: 1.4em;
-      font-size: 350px;
+      font-size: 20vw;
       line-height: 120px;
       font-weight: 400;
-      color: #A74D4A;
+      color: #FF5E1A;
       margin: 0;
       position: relative;
       z-index: 2; /* ensure text is above the image */
       margin-bottom: 400px;
+      text-shadow: 0 1px 1px #000000;
     }
 
     .bio {
       margin-top: 150px;
       margin-left: 20px;
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 1.6;
       max-width: 700px;
-      color: #A74D4A;
+      color: #000000;
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
       text-decoration: None;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
 
     .bio.revealed {
@@ -127,8 +140,9 @@
     }
 
     .name-title span {
-      font-size: 45px;
-      color: #A74D4A;
+      font-size: 2.5rem;
+      color: #000000;
+      font-weight: bold;
     }
 
     .name-title em {
@@ -136,14 +150,14 @@
       font-style: italic;
       display: block;
       margin-top: 4px;
-      font-size: 25px;
-      color: #A74D4A;
+      font-size: 1.75rem;
+      color: #FF5E1A;
     }
 
     nav a {
       margin-left: 16px;
       text-decoration: None;
-      color: #A74D4A;
+      color: #FF5E1A;
     }
 
     .image-overlay-container {
@@ -227,13 +241,13 @@
       }
 
       .portfolio-title {
-        font-size: 48vw;
+        font-size: 14vw;
         line-height: 1;
         word-break: break-word;
       }
 
       .bio {
-        font-size: 15px;
+        font-size: 0.94rem;
         max-width: 100%;
       }
 
@@ -247,12 +261,12 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 12px 8px;
-        font-size: 16px;
+        font-size: 1rem;
       }
 
       .email {
         margin: 24px 8px 0;
-        font-size: 16px;
+        font-size: 1rem;
       }
 
       .name-title strong {
@@ -266,22 +280,27 @@
 
     @media screen and (max-width: 480px) {
       .portfolio-title {
-        font-size: 18vw;
+        font-size: 12vw;
       }
       .bio {
-        font-size: 13px;
+        font-size: 0.81rem;
       }
       .email {
-        font-size: 14px;
+        font-size: 0.88rem;
       }
       header {
-        font-size: 13px;
+        font-size: 0.81rem;
+      }
+      .work-img {
+        width: 90vw;
+        max-width: 18.75rem;
+        height: 7.5rem;
       }
     }
 
     .about-section {
       background: #E4E4E4;
-      padding: 100px 40px 80px;
+      padding: 10px 40px 80px;
       min-height: 60vh;
       display: flex;
       flex-direction: column;
@@ -291,15 +310,15 @@
     }
     .about-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      color: #A74D4A;
+      font-size: 2.5rem;
+      color: #FF5E1A;
       margin-bottom: 32px;
       font-style: italic;
-      text-decoration: underline 2px dashed #A74D4A;
+      text-decoration: underline 2px dashed #000000;
       font-weight: normal;
     }
     .about-section p {
-      font-size: 24px;
+      font-size: 1.5rem;
       color: #333;
       max-width: 800px;
       text-align: left;
@@ -311,33 +330,84 @@
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
-      gap: 200px;
+      gap: 300px;
       margin-top: 70px;
       flex-wrap: wrap;
     }
     .work-img {
-      width: 220px;
-      height: 220px;
+      width: 12rem;
+      height: 12rem;
       object-fit: cover;
       border-radius: 12px;
       background: #fff;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
 
+    .works-row-overlay-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .works-row-overlay-text {
+      position: absolute;
+      top: 32px;
+      left: 0;
+      width: 100%;
+      text-align: left;
+      /* font-family: 'Playfair Display', serif; */
+      font-size: 2.5rem;
+      color: #000000;
+      font-weight:900;
+      letter-spacing: 2px;
+      /* text-shadow: 0 2px 16px #A74D4A, 0 1px 0 #A74D4A; */
+      pointer-events: none;
+      z-index: 2;
+      /* mix-blend-mode: lighten; */
+      /* Adjust mix-blend-mode or color for best contrast on your images */
+      padding: 0 8px;
+      box-sizing: border-box;
+      margin-top: 150px;
+    }
+
+    .works-row {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 900px) {
+      .works-row-overlay-text {
+        font-size: 2rem;
+        top: 18px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .works-row-overlay-text {
+        font-size: 1.2rem;
+        top: 8px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .works-row-overlay-text {
+        font-size: 1rem;
+        top: 4px;
+      }
+    }
+
     @media screen and (max-width: 1000px) {
       .work-img {
-        width: 150px;
-        height: 150px;
+        width: 9.375rem;
+        height: 9.375rem;
       }
     }
 
     @media screen and (max-width: 900px) {
-      .works-row {
-        gap: 16px;
-      }
       .work-img {
-        width: 120px;
-        height: 120px;
+        width: 7.5rem;
+        height: 7.5rem;
       }
     }
 
@@ -348,8 +418,14 @@
       }
       .work-img {
         width: 45vw;
-        max-width: 160px;
-        height: 90px;
+        max-width: 10rem;
+        height: 5.6rem;
+      }
+      .about-section h2 {
+        font-size: 1.75rem;
+      }
+      .about-section p {
+        font-size: 1rem;
       }
     }
 
@@ -361,8 +437,8 @@
       }
       .work-img {
         width: 90vw;
-        max-width: 300px;
-        height: 120px;
+        max-width: 18.75rem;
+        height: 7.5rem;
       }
     }
   </style>
@@ -398,13 +474,13 @@
     <div class="left">
       <h1 class="portfolio-title">PORTFOLIO</h1>
       <!-- <h1 class="portfolio-title">AAYUSHI</h1> -->
-        <p class="bio">
-            I’m Aayushi—a strategic thinker fueled by empathy, curiosity, and a passion for creating meaningful experiences.
-            <br><br>
-            Before UX research, I was a lifestyle accessory designer. Now, I’m immersed in human-centered design—researching, creating, testing, and crafting experiences that bridge people and purpose. 
-            <br>
-            Always evolving. Always exploring.
-        </p>
+      <p class="bio">
+        I’m Aayushi—a strategic thinker fueled by empathy, curiosity, and a passion for creating meaningful experiences.
+        <br><br>
+        Before UX research, I was a lifestyle accessory designer. Now, I’m immersed in human-centered design—researching, creating, testing, and crafting experiences that bridge people and purpose. 
+        <br>
+        Always evolving. Always exploring.
+      </p>
     </div>
 
     <div class="right">
@@ -422,11 +498,18 @@
   <!-- New Section: About/More Info/Anything -->
   <section class="about-section">
     <h2>Select Works</h2>
-    <div class="works-row">
-      <img src="work1.jpg" alt="Work 1" class="work-img" />
-      <img src="work2.jpg" alt="Work 2" class="work-img" />
-      <img src="work3.jpg" alt="Work 3" class="work-img" />
-      <img src="work4.jpg" alt="Work 4" class="work-img" />
+    <div class="works-row-overlay-wrapper">
+      <div class="works-row-overlay-text">
+        MERAKI | SPIRIT OF THE CRAFT </br> 
+        MEET ALL | CONNECTING COMMUNITIES </br> 
+        VESTA | BE YOUR VEST SELF</br> 
+        TRAVELWELL | TOMORROWS ENRICHMENT SERVICE BLUEPRINT</div>
+      <div class="works-row">
+        <img src="../assets/meraki-front.png" alt="Meraki" class="work-img" />
+        <img src="../assets/meetall-front.png" alt="Meet All" class="work-img" />
+        <img src="../assets/vesta-front.png" alt="Vesta" class="work-img" />
+        <img src="../assets/vougish-front.png" alt="Vougish" class="work-img" />
+      </div>
     </div>
   </section>
 </body>
