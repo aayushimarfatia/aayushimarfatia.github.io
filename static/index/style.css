@@ -96,7 +96,9 @@ header {
 .bio {
     margin-top: 7rem;
     margin-left: 1.25rem;
-    font-size: clamp(1.125rem, 3vw, 1.875rem);
+    /* font-size: clamp(1.125rem, 3vw, 1.875rem); */
+    /* font-size: clamp(1rem, 2.5vw, 1.2rem); */
+    font-size: 24px;
     line-height: 1.6;
     max-width: 700px;
     color: #000000;
@@ -485,8 +487,8 @@ header {
     }
     
     .work-img {
-        width: 90vw;
-        max-width: 300px;
+        width: 110vw;
+        max-width: 400px;
         height: 120px;
     }
     

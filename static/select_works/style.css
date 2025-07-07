@@ -1,0 +1,270 @@
+/* Select Works Page Styles */
+
+/* Header adjustments for portfolio page */
+.header-name {
+    font-weight: normal;
+    color: #FF5E1A;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #FF5E1A;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    text-decoration: underline 2px dashed #000000;
+}
+
+/* Main content */
+.works-main {
+    padding-top: 2rem;
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Page header */
+.works-header {
+    margin-bottom: 3rem;
+}
+
+.works-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2vw, 3.5rem);
+    color: #FF5E1A;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1rem;
+}
+
+/* Individual project item */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+/* Alternate layout for even items */
+.project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Project content */
+.project-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #FF5E1A;
+    font-weight: 400;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.project-subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #666;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #FF5E1A;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.project-link:hover {
+    color: #000000;
+}
+
+/* Project image */
+.project-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .works-main {
+        padding-top: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .works-header {
+        margin-bottom: 2rem;
+    }
+    
+    .works-title {
+        padding-left: 0;
+    }
+    
+    .projects-grid {
+        gap: 2.5rem;
+        padding: 0.5rem;
+    }
+    
+    .project-item {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    
+    .project-content {
+        min-width: 0;
+        width: 100%;
+    }
+    
+    .project-image {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .project-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .project-subtitle {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .works-main {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.25rem 0;
+    }
+    
+    .projects-grid {
+        gap: 2rem;
+        padding: 0;
+    }
+    
+    .project-item {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .project-title {
+        font-size: clamp(1.8rem, 10vw, 2.5rem);
+    }
+    
+    .project-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .project-link {
+        font-size: 0.9rem;
+    }
+    
+    .project-image img {
+        border-radius: 10px;
+        aspect-ratio: 3/2;
+    }
+}
+
+/* Mobile navigation adjustments */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        min-width: 140px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 0 0 8px 8px;
+        z-index: 100;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-links.open {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+}
